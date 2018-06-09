@@ -15,9 +15,7 @@ pipeline {
             }
             steps {
                 sh 'mvn --version'
-            }
-            steps {
-                sh 'mvn -U -b clean package'
+                sh 'mvn -U --batch-mode clean package'
             }
         }
     }
