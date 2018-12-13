@@ -1,0 +1,4 @@
+GET http://172.17.0.1:8080/
+GET http://172.17.0.1:8080/simulate
+GET http://172.17.0.1:8080/company
+GET http://172.17.0.1:8080/hello
