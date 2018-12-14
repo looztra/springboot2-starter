@@ -1,0 +1,18 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sb2-starter
+  labels:
+    app: sb2-starter
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/actuator/prometheus"
+    prometheus.io/port: "8080"
+spec:
+  selector:
+    app: sb2-starter
+  ports:
+    - name: main
+      port: 8080
+      targetPort: main
