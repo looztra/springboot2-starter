@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vegeta
+spec:
+  selector:
+    matchLabels:
+      app: vegeta
+  template:
+    metadata:
+      labels:
+        app: vegeta
+    spec:
+      containers:
+      - name: vegeta
+        image: digital-factory.lyreco.com/docker.io/oba11/vegeta:6.3.0
+        resources:
+          limits:
+            cpu: 500m
+            memory: 128Mi
+        volumeMounts:
+          - mountPath: /etc/vegeta-config
+            name: vegeta-config-files
+        envFrom:
+          - configMapRef:
+              name: vegeta-config-values
+        command:
+          - sh
+        args:
+          - -c
+          - "vegeta attack -duration=$(VEGETA_DURATION) -rate $(VEGETA_RATE) -output /dev/null -targets /etc/vegeta-config/url.list"
+      terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+        - name: nexus
+      volumes:
+        - name: vegeta-config-files
+          configMap:
+            name: vegeta-config-files

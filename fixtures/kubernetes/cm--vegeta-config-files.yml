@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vegeta-config-files
+  labels:
+    app: vegeta
+data:
+  url.list: |-
+    GET http://sb2-starter:8080/
+    GET http://sb2-starter:8080/hello
+    GET http://sb2-starter:8080/company
+    GET http://sb2-starter:8080/simulate
