@@ -36,7 +36,7 @@ public class SampleController {
 
     @RequestMapping("/company")
     @ResponseBody
-    String lyreco() {
+    String company() {
         return "our company!";
     }
 

@@ -30,4 +30,4 @@ chmod u+x kustomize
 ### Use
 
 - Apply "default" : `kustomize build bases/common/ | kubectl apply -f -`
-- Apply "lyreco" : `kustomize build overlays/lyreco/ | kubectl apply -f -`
+- Apply "company" : `kustomize build overlays/company/ | kubectl apply -f -`
