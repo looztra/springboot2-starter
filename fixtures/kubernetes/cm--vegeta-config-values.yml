@@ -5,5 +5,5 @@ metadata:
   labels:
     app: vegeta
 data:
-  VEGETA_RATE: "1"
+  VEGETA_RATE: "10"
   VEGETA_DURATION: "0"

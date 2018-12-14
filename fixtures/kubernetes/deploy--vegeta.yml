@@ -6,6 +6,11 @@ spec:
   selector:
     matchLabels:
       app: vegeta
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -16,7 +21,7 @@ spec:
         image: digital-factory.lyreco.com/docker.io/oba11/vegeta:6.3.0
         resources:
           limits:
-            cpu: 500m
+            cpu: 100m
             memory: 128Mi
         volumeMounts:
           - mountPath: /etc/vegeta-config
