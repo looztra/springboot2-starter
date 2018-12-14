@@ -1,0 +1,12 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sb2-starter
+spec:
+  template:
+    spec:
+      containers:
+      - name: sb2-starter
+        image: digital-factory.lyreco.com/docker.io/nodevops/sb2-starter
+        imagePullPolicy: Always

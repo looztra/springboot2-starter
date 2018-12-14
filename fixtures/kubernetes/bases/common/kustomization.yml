@@ -1,0 +1,6 @@
+resources:
+- cm--vegeta-config-files.yml
+- cm--vegeta-config-values.yml
+- deploy--sb2-starter.yml
+- deploy--vegeta.yml
+- svc--sb2-starter.yml

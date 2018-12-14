@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: sb2-starter
-        image: digital-factory.lyreco.com/docker.io/nodevops/sb2-starter
+        image: nodevops/sb2-starter
         imagePullPolicy: Always
         ports:
           - name: main

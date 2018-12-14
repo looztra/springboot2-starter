@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: vegeta
-        image: digital-factory.lyreco.com/docker.io/oba11/vegeta:6.3.0
+        image: oba11/vegeta:6.3.0
         resources:
           limits:
             cpu: 100m

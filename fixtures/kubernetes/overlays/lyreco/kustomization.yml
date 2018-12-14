@@ -1,0 +1,7 @@
+---
+bases:
+  - ../../bases/common
+  - ../../bases/lyreco
+patchesStrategicMerge:
+  - deploy--sb2-starter--patch.yml
+  - deploy--vegeta--patch.yml
