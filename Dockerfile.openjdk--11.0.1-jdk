@@ -1,0 +1,11 @@
+FROM openjdk:11.0.1-jdk
+EXPOSE 8080 5005
+ENV AB_OFF= \
+    JAVA_DIAGNOSTICS= \
+    JAVA_APP_DIR=/app \
+    JAVA_OPTS_SHOW_SETTINGS_VM="-XshowSettings:vm" \
+    JAVA_OPTS=""
+
+COPY target/sb2-starter-1.0.0-SNAPSHOT.jar /app/sb2.jar
+
+CMD java $JAVA_OPTS_SHOW_SETTINGS_VM $JAVA_OPTS -jar /app/sb2.jar
